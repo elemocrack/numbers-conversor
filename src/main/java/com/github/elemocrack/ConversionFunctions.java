@@ -16,7 +16,7 @@ public class ConversionFunctions {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println(" ");
-            System.out.println("---------- \n1 Decimal a binario \n2 Binario a decimal \n3 Binario a hexadecimal \n4 Decimal a hexadecimal\n5 Hexadecimal a decimal");
+            System.out.println("---------- \n1 Decimal a binario \n2 Binario a decimal \n3 Binario a hexadecimal \n4 Decimal a hexadecimal \n5 Hexadecimal a decimal");
             if (scanner.hasNextInt()) {
                 int options = scanner.nextInt();
                 switch (options) {
@@ -58,7 +58,7 @@ public class ConversionFunctions {
                             System.out.println("Debes ingresar solo 0 o 1");
                             break;
                         }
-                        List<String> newList = HexadecimalConversion.hexadecimalList(numeroLista);
+                        List<String> newList = HexadecimalConversion.decimalToHexadecimal(numeroLista);
                         ListUtil.showList(newList);
                         break;
                     case 4:
@@ -66,7 +66,7 @@ public class ConversionFunctions {
                         if (scanner.hasNextInt()) {
                             int num = scanner.nextInt();
                             List<Integer> integerList = DecimalConversion.decimalToBinary(num);
-                            ListUtil.showList(HexadecimalConversion.hexadecimalList(integerList));
+                            ListUtil.showList(HexadecimalConversion.decimalToHexadecimal(integerList));
                         } else {
                             System.out.println("Tiene que ingresar numeros");
                             scanner.nextLine();

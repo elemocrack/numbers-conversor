@@ -1,13 +1,12 @@
 package com.github.elemocrack.conversion;
 
-import com.github.elemocrack.conversion.DecimalConversion;
 import com.github.elemocrack.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HexadecimalConversion {
-    public static List<String> hexadecimalList(List<Integer> integerList) {
+    public static List<String> decimalToHexadecimal(List<Integer> integerList) {
         List<Integer> convertedNums = new ArrayList<>();
         List<String> finalConversion = new ArrayList<>();
         for (int i = integerList.size() - 1; i >= 0; i -= 4) {
