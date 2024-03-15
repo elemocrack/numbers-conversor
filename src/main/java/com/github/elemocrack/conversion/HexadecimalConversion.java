@@ -145,6 +145,12 @@ public class HexadecimalConversion {
                     finalConversion.add(0);
                     finalConversion.add(1);
                     break;
+                case "0":
+                    finalConversion.add(0);
+                    finalConversion.add(0);
+                    finalConversion.add(0);
+                    finalConversion.add(0);
+                    break;
             }
         }
         int conversion = DecimalConversion.binaryToDecimal(finalConversion);
